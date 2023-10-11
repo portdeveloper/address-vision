@@ -21,11 +21,11 @@ export const QRCodeCard = ({ someAddress }: { someAddress: Address }) => {
       <div className="card-body flex items-center justify-center">
         {someAddress ? (
           <>
-            <div className="hidden md:block">
-              <QRCodeSVG value={someAddress} size={350} />
-            </div>
             <div className="block md:hidden">
               <QRCodeSVG value={someAddress} size={250} />
+            </div>
+            <div className="hidden md:block">
+              <QRCodeSVG value={someAddress} size={350} />
             </div>
           </>
         ) : (
