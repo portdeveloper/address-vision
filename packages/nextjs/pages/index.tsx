@@ -33,8 +33,8 @@ const Home: NextPage = () => {
 
       {someAddress ? (
         <div className="flex w-full flex-grow flex-col items-center justify-center gap-4 p-4 md:mt-4">
-          <div className="flex flex-wrap">
-            <div className="w-full flex-wrap space-y-4 p-4 sm:w-1/2 lg:w-1/3">
+          <div className="flex w-fit flex-wrap justify-center ">
+            <div className="w-fit flex-wrap space-y-4 p-4 ">
               <AddressCard address={someAddress} />
               <div className="w-[370px] md:hidden lg:hidden">
                 <QRCodeCard someAddress={someAddress} />
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
               </div>
             </div>
 
-            <div className="w-full space-y-4 p-4 hidden sm:w-1/2 md:block lg:block lg:w-1/3">
+            <div className="w-fit space-y-4 p-4 hidden  md:block lg:block ">
               <QRCodeCard someAddress={someAddress} />
               <div className="lg:hidden">
                 <NetworkCard someAddress={someAddress} chain={chains.mainnet} />
@@ -60,7 +60,7 @@ const Home: NextPage = () => {
               <NetworkCard someAddress={someAddress} chain={chains.optimism} />
             </div>
 
-            <div className="w-full space-y-4 p-4 hidden sm:w-1/2 md:hidden lg:block lg:w-1/3">
+            <div className="w-fit space-y-4 p-4 hidden  md:hidden lg:block  ">
               <NetworkCard someAddress={someAddress} chain={chains.mainnet} />
 
               <NetworkCard someAddress={someAddress} chain={chains.polygon} />
